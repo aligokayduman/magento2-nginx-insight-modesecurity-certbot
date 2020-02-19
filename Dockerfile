@@ -84,6 +84,8 @@ RUN cd \
 RUN mkdir /var/ngx_pagespeed_cache \
     && chown nginx:nginx /var/ngx_pagespeed_cache
     
+ARG DEBIAN_FRONTEND=noninteractive    
+    
 #Install CertBot
 RUN apt update \
     && apt install -y software-properties-common \
